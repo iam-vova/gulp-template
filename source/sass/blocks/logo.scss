@@ -2,13 +2,37 @@
   display: flex;
   min-width: 204px;
 
+  @media (max-width: $tablet-width) {
+    min-width: auto;
+  }
+
   img {
     margin-right: 16px;
+
+    @media (max-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  &--footer img {
+    @media (max-width: $tablet-width) {
+      width: 52px;
+      height: 52px;
+    }
   }
 
   &__extra {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+
+      &--footer {
+        display: flex;
+      }
+    }
   }
 
   &__title {

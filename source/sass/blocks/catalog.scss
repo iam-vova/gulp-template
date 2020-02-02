@@ -31,6 +31,14 @@
       font-size: 32px;
       line-height: 45px;
     }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 42px;
+      padding-right: 10px;
+
+      font-size: 28px;
+      line-height: 39px;
+    }
   }
 
   &__list {
@@ -48,6 +56,11 @@
     @media (max-width: $desktop-width) {
       width: calc(100% - 34px);
       margin-bottom: 39px;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      margin: 0 5px 24px;
     }
   }
 
@@ -76,6 +89,10 @@
       width: 5px;
       height: 9px;
       background-image: url("../img/icon-arrow-right.svg");
+
+      @media (max-width: $tablet-width) {
+        right: 30px;
+      }
     }
 
     &:hover,
@@ -123,6 +140,11 @@
     @media (max-width: $desktop-width) {
       top: 39px;
       left: 45px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 20px;
+      left: 35px;
     }
   }
 }

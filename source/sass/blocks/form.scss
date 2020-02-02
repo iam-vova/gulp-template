@@ -4,9 +4,17 @@
 
   padding-left: 10px;
 
+  @media (max-width: $tablet-width) {
+    padding: 0 5px;
+  }
+
   &__wrap {
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -34,6 +42,11 @@
 
     @media (max-width: $desktop-width) {
       padding: 12px 17px 17px;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      margin-bottom: 31px;
     }
   }
 
@@ -63,10 +76,19 @@
       width: auto;
       height: 162px;
     }
+
+    @media (max-width: $tablet-width) {
+      height: 104px;
+      margin-bottom: 31px;
+    }
   }
 
   &__submit {
     display: flex;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+    }
   }
 
   &__send {
@@ -83,6 +105,11 @@
     @media (max-width: $desktop-width) {
       width: 280px;
     }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      margin-bottom: 32px;
+    }
   }
 
   &__checkbox + label::before {
@@ -97,6 +124,11 @@
     border: 1px solid #ffffff;
 
     cursor: pointer;
+
+    @media (max-width: $tablet-width) {
+      left: 0;
+      top: 0;
+    }
   }
 
   &__checkbox + label:hover::before,
@@ -121,6 +153,12 @@
     background-repeat: no-repeat;
 
     cursor: pointer;
+
+
+    @media (max-width: $tablet-width) {
+      left: 5px;
+      top: 6px;
+    }
   }
 
   &__label {
@@ -138,6 +176,12 @@
 
     @media (max-width: $desktop-width) {
       padding: 8px 0 0 42px;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 100%;
+      margin-left: 0;
+      padding: 0 0 0 34px;
     }
   }
 }

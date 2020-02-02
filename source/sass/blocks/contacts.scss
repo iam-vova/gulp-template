@@ -4,9 +4,23 @@
 
   &__link {
     margin-left: 87px;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 1;
+    }
 
     @media (max-width: $desktop-width) {
       margin-left: 34px;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin: 0 0 5px 22px;
     }
   }
 
