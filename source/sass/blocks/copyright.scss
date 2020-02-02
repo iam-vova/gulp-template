@@ -1,0 +1,38 @@
+.copyright {
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
+
+  &__wrap {
+    display: flex;
+    max-width: 1415px;
+    margin: 0 auto;
+    padding: 13px 15px;
+  }
+
+  &__text,
+  &__link {
+    margin: 0;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.52px;
+    text-transform: uppercase;
+    color: #1b2d37;
+    opacity: 0.5;
+  }
+
+  &__text {
+    margin-right: 75px;
+
+    &--copyright {
+      margin-right: 142px;
+    }
+  }
+
+  &__link {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}

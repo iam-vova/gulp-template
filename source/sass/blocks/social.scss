@@ -1,0 +1,11 @@
+.social {
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+}

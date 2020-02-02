@@ -1,0 +1,126 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10px;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: calc(50% - 15px);
+    margin-bottom: 40px;
+    padding: 14px 16px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-light;
+
+    background-color: #19baff;
+    border: none;
+
+    &::placeholder {
+      color: $text-light;
+    }
+
+    &:nth-of-type(2n-1) {
+      margin-right: 30px;
+    }
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    width: 570px;
+    height: 154px;
+    resize: none;
+
+    margin-bottom: 45px;
+    padding: 14px 16px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-light;
+
+    background-color: #19baff;
+    border: none;
+
+    &::placeholder {
+      color: $text-light;
+    }
+  }
+
+  &__submit {
+    display: flex;
+  }
+
+  &__send {
+    width: 270px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $cyan;
+      background-color: #ffffff;
+    }
+  }
+
+  &__checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 8px;
+
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid #ffffff;
+
+    cursor: pointer;
+  }
+
+  &__checkbox + label:hover::before,
+  &__checkbox:focus + label::before {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__checkbox:disabled ~ label {
+    opacity: 0.3;
+  }
+
+  &__checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 14px;
+
+    width: 8px;
+    height: 5px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+  }
+
+  &__label {
+    position: relative;
+    width: calc(50% - 70px);
+    margin-left: 30px;
+    padding: 10px 0 0 40px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-light;
+    opacity: 0.8;
+  }
+}

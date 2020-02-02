@@ -1,0 +1,58 @@
+.about-us {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1194px;
+  padding: 0 10px 0 192px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -18px;
+    width: 220px;
+    height: 317px;
+
+    background: url("../img/about-us-2005.png") no-repeat;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: $text-dark;
+  }
+
+  &__text {
+    max-width: 985px;
+    margin: 0 0 20px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: $text-dark;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__details {
+    padding: 14px 50px 12px;
+    margin-bottom: 112px;
+    color: $cyan;
+    border-color: $cyan;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $text-light;
+      background-color: $cyan;
+    }
+  }
+}

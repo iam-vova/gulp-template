@@ -1,0 +1,26 @@
+.contacts {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    margin-left: 87px;
+  }
+
+  &__text {
+    margin-left: 14px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: $text-light;
+  }
+
+  &__icon {
+    vertical-align: middle;
+  }
+
+  &__callme {
+    margin-left: 49px;
+  }
+}

@@ -1,0 +1,98 @@
+.catalog {
+  background-color: #1b2d37;
+
+  &__wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 87px 0 91px;
+  }
+
+  &__title {
+    margin: 0 0 52px;
+    padding: 0 15px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: $text-light;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    padding: 0;
+  }
+
+  &__item {
+    width: calc(100% / 3 - 30px);
+    margin: 0 15px 15px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 6px;
+      right: 0;
+      width: 63px;
+      height: 63px;
+      background-color: $cyan;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 33px;
+      right: 27px;
+      width: 5px;
+      height: 9px;
+      background-image: url("../img/icon-arrow-right.svg");
+    }
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        opacity: 0.8;
+      }
+
+      .catalog__img {
+        opacity: 0.4;
+      }
+    }
+
+    &:active {
+      .catalog__img {
+        opacity: 0.2;
+      }
+    }
+  }
+
+  &__img {
+    opacity: 0.2;
+  }
+
+  &__card-header {
+    position: absolute;
+    top: 50px;
+    left: 44px;
+    width: 170px;
+    margin: 0 0 10px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: $text-light;
+  }
+}

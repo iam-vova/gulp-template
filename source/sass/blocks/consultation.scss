@@ -1,0 +1,44 @@
+.consultation {
+  min-height: 670px;
+  background: url("../img/triangles-desktop@1x.png") no-repeat;
+  background-color: $cyan;
+  background-position: 175px -59px;
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    background: url("../img/airplane-desktop@1x.png") no-repeat;
+    background-position: 15px 162px;
+  }
+
+  &__block {
+    width: 580px;
+    padding: 91px 39px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    padding-left: 5px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 51px;
+    color: $text-light;
+  }
+
+  &__text {
+    margin: 0 0 50px;
+    padding-left: 10px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-light;
+  }
+}
