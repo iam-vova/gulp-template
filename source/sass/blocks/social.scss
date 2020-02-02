@@ -3,9 +3,19 @@
     display: flex;
     list-style: none;
     padding: 0;
+
+    @media (max-width: $desktop-width) {
+      margin-top: 10px;
+    }
   }
 
   &__item {
     margin-right: 15px;
+
+    @media (max-width: $desktop-width) {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

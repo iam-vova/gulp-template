@@ -2,6 +2,10 @@
   position: relative;
   min-height: 760px;
 
+  @media (max-width: $desktop-width) {
+    min-height: 596px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -29,6 +33,14 @@
       width: 671px;
       height: 641px;
       background: url("../img/triangles.svg") no-repeat;
+
+      @media (max-width: $desktop-width) {
+        top: -228px;
+        right: 0;
+        width: 330px;
+        height: 506px;
+        background-size: cover;
+      }
     }
   }
 
@@ -37,6 +49,13 @@
     z-index: -1;
     top: -57px;
     right: 19px;
+
+    @media (max-width: $desktop-width) {
+      width: 260px;
+      height: 340px;
+      top: -75px;
+      right: 0;
+    }
   }
 
   &__title {
@@ -51,6 +70,15 @@
 
     letter-spacing: 0.07em;
     text-transform: uppercase;
+
+    @media (max-width: $desktop-width) {
+      width: 500px;
+      margin: 98px 0 30px;
+      padding-left: 68px;
+
+      font-size: 60px;
+      line-height: 70px;
+    }
   }
 
   &__desc {
@@ -74,6 +102,21 @@
       top: 16px;
 
       background: #ffffff;
+
+      @media (max-width: $desktop-width) {
+        width: 33px;
+        left: 24px;
+        top: 15px;
+      }
+    }
+
+    @media (max-width: $desktop-width) {
+      width: 400px;
+      margin: 0 0 54px 47px;
+
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.75px;
     }
   }
 
@@ -91,6 +134,12 @@
       color: $cyan;
       background-color: #ffffff;
     }
+
+    @media (max-width: $desktop-width) {
+      width: 380px;
+      padding: 19px;
+      margin-left: 119px;
+    }
   }
 
   &__scroll {
@@ -105,5 +154,9 @@
     color: $text-light;
     opacity: 0.5;
     transform: rotate(-90deg);
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }

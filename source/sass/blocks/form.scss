@@ -31,6 +31,10 @@
     &:nth-of-type(2n-1) {
       margin-right: 30px;
     }
+
+    @media (max-width: $desktop-width) {
+      padding: 12px 17px 17px;
+    }
   }
 
   &__textarea {
@@ -54,6 +58,11 @@
     &::placeholder {
       color: $text-light;
     }
+
+    @media (max-width: $desktop-width) {
+      width: auto;
+      height: 162px;
+    }
   }
 
   &__submit {
@@ -69,6 +78,10 @@
     &:focus {
       color: $cyan;
       background-color: #ffffff;
+    }
+
+    @media (max-width: $desktop-width) {
+      width: 280px;
     }
   }
 
@@ -122,5 +135,9 @@
     line-height: 16px;
     color: $text-light;
     opacity: 0.8;
+
+    @media (max-width: $desktop-width) {
+      padding: 8px 0 0 42px;
+    }
   }
 }

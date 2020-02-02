@@ -4,6 +4,10 @@
 
   &__link {
     margin-left: 87px;
+
+    @media (max-width: $desktop-width) {
+      margin-left: 34px;
+    }
   }
 
   &__text {
@@ -14,13 +18,35 @@
     font-size: 16px;
     line-height: 18px;
     color: $text-light;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &__icon {
     vertical-align: middle;
+
+    &--mail {
+      @media (max-width: $desktop-width) {
+        width: 25.33px;
+        height: 18.67px;
+      }
+    }
+
+    &--phone {
+      @media (max-width: $desktop-width) {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__callme {
     margin-left: 49px;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }

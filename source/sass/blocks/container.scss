@@ -1,4 +1,8 @@
 .container {
   background: #ffffff url("../img/four-triangles.svg") no-repeat;
   background-position-y: -28px;
+
+  @media (max-width: $desktop-width) {
+    background-position: -348px -86px;
+  }
 }

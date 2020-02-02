@@ -1,10 +1,18 @@
 .catalog {
   background-color: #1b2d37;
 
+  @media (max-width: $desktop-width) {
+    padding: 0 10px;
+  }
+
   &__wrap {
     max-width: 1200px;
     margin: 0 auto;
     padding: 87px 0 91px;
+
+    @media (max-width: $desktop-width) {
+      padding: 50px 0 20px;
+    }
   }
 
   &__title {
@@ -16,6 +24,13 @@
     font-size: 36px;
     line-height: 51px;
     color: $text-light;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: 50px;
+
+      font-size: 32px;
+      line-height: 45px;
+    }
   }
 
   &__list {
@@ -29,6 +44,11 @@
   &__item {
     width: calc(100% / 3 - 30px);
     margin: 0 15px 15px;
+
+    @media (max-width: $desktop-width) {
+      width: calc(100% - 34px);
+      margin-bottom: 39px;
+    }
   }
 
   &__link {
@@ -79,6 +99,11 @@
 
   &__img {
     opacity: 0.2;
+
+    @media (max-width: $desktop-width) {
+      width: 100%;
+      min-height: 256px;
+    }
   }
 
   &__card-header {
@@ -94,5 +119,10 @@
     font-size: 20px;
     line-height: 30px;
     color: $text-light;
+
+    @media (max-width: $desktop-width) {
+      top: 39px;
+      left: 45px;
+    }
   }
 }

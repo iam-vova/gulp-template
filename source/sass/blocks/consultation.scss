@@ -1,8 +1,14 @@
 .consultation {
   min-height: 670px;
-  background: url("../img/triangles.svg") no-repeat;
+  background-image: url("../img/triangles.svg");
+  background-repeat: no-repeat;
   background-color: $cyan;
   background-position: 175px -59px;
+
+  @media (max-width: $desktop-width) {
+    min-height: 664px;
+    background-image: none;
+  }
 
   &__wrap {
     position: relative;
@@ -13,11 +19,20 @@
 
     background: url("../img/airplane-desktop@1x.png") no-repeat;
     background-position: 15px 162px;
+
+    @media (max-width: $desktop-width) {
+      background-image: none;
+    }
   }
 
   &__block {
     width: 580px;
     padding: 91px 39px;
+
+    @media (max-width: $desktop-width) {
+      width: 100%;
+      padding: 80px 89px 80px 83px;
+    }
   }
 
   &__title {
@@ -29,6 +44,13 @@
     font-size: 36px;
     line-height: 51px;
     color: $text-light;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: 16px;
+
+      font-size: 32px;
+      line-height: 45px;
+    }
   }
 
   &__text {
@@ -40,5 +62,9 @@
     font-size: 16px;
     line-height: 22px;
     color: $text-light;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: 54px;
+    }
   }
 }

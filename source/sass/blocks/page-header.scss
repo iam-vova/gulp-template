@@ -6,4 +6,10 @@
   max-width: 1411px;
   margin: 0 auto;
   padding: 33px 20px;
+
+  @media (max-width: $desktop-width) {
+    padding: 19px 25px;
+  }
 }
+
+
