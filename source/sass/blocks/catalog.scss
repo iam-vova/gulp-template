@@ -55,12 +55,14 @@
 
     @media (max-width: $desktop-width) {
       width: calc(100% - 34px);
-      margin-bottom: 39px;
+      height: 256px;
+      margin-bottom: 45px;
+      overflow: hidden;
     }
 
     @media (max-width: $tablet-width) {
       width: 100%;
-      margin: 0 5px 24px;
+      margin: 0 5px 30px;
     }
   }
 
@@ -78,6 +80,10 @@
       width: 63px;
       height: 63px;
       background-color: $cyan;
+
+      @media (max-width: $desktop-width) {
+        bottom: 0;
+      }
     }
 
     &::after {
@@ -90,8 +96,8 @@
       height: 9px;
       background-image: url("../img/icon-arrow-right.svg");
 
-      @media (max-width: $tablet-width) {
-        right: 30px;
+      @media (max-width: $desktop-width) {
+        bottom: 27px;
       }
     }
 
@@ -102,19 +108,19 @@
         opacity: 0.8;
       }
 
-      .catalog__img {
+      img {
         opacity: 0.4;
       }
     }
 
     &:active {
-      .catalog__img {
+      img {
         opacity: 0.2;
       }
     }
   }
 
-  &__img {
+  img {
     opacity: 0.2;
 
     @media (max-width: $desktop-width) {

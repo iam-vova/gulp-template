@@ -21,10 +21,28 @@
     background: #1b2d37 url("../img/bg-desktop@1x.jpg");
     background-size: cover;
 
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-desktop@2x.jpg");
+    }
+
     @media (max-width: $desktop-width) {
       height: 694px;
       top: -90px;
       background-image: url("../img/bg-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-tablet@2x.jpg");
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      height: 659px;
+      top: -73px;
+      background-image: url("../img/bg-mobi@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/bg-mobi@2x.jpg");
+      }
     }
   }
 
@@ -64,7 +82,7 @@
     }
   }
 
-  &__img {
+  img {
     position: absolute;
     z-index: -1;
     top: -57px;
@@ -127,7 +145,6 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 34px;
-    letter-spacing: 1px;
 
     &::before {
       content: "";
@@ -156,7 +173,6 @@
 
       font-size: 18px;
       line-height: 28px;
-      letter-spacing: 0.75px;
     }
 
     @media (max-width: $tablet-width) {
@@ -167,7 +183,6 @@
 
       font-size: 16px;
       line-height: 25px;
-      letter-spacing: normal;
     }
   }
 
@@ -186,10 +201,6 @@
       background-color: #ffffff;
     }
 
-    &--mobi {
-      display: none;
-    }
-
     @media (max-width: $desktop-width) {
       width: 380px;
       padding: 19px;
@@ -199,14 +210,20 @@
     @media (max-width: $tablet-width) {
       width: 287px;
       margin-left: 3px;
+    }
+  }
 
-      &--mobi {
-        display: inline;
-      }
+  &__consultation-mobi {
+    display: none;
 
-      &--desktop {
-        display: none;
-      }
+    @media (max-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  &__consultation-desktop {
+    @media (max-width: $tablet-width) {
+      display: none;
     }
   }
 

@@ -1,0 +1,130 @@
+.modal {
+  display: none;
+
+  &__show {
+    display: block;
+  }
+}
+
+.modal-write-us {
+  position: relative;
+  top: 50%;
+  width: 490px;
+  min-height: 605px;
+  margin: 0 auto;
+  padding: 30px 40px 5px 30px;
+
+  background-color: $cyan;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+
+  &__title {
+    margin: 0 0 12px;
+    padding: 0 10px;
+
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: $text-light;
+  }
+
+  &__close {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    width: 16.56px;
+    height: 16.56px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: 0;
+    transition: opacity 0.3s ease;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: -3px;
+
+      width: 25px;
+      height: 1px;
+
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    margin: 0 0 33px;
+    padding: 0 20px 0 10px;
+
+    font-family: "PT Mono", "Consolas", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $text-light;
+  }
+
+  &__form {
+    input,
+    textarea {
+      width: 100%;
+      margin: 0 0 32px;
+      padding: 12px 23px 16px;
+    }
+
+    textarea {
+      height: 104px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      width: auto;
+      margin-left: 0;
+      padding: 0 15px 0 47px;
+    }
+
+    input + label::before {
+      top: 1px;
+      left: 0;
+    }
+
+    input:checked + label::after {
+      top: 7px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}

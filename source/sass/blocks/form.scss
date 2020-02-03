@@ -17,7 +17,7 @@
     }
   }
 
-  &__input {
+  input {
     box-sizing: border-box;
     width: calc(50% - 15px);
     margin-bottom: 40px;
@@ -50,7 +50,7 @@
     }
   }
 
-  &__textarea {
+  textarea {
     box-sizing: border-box;
     width: 570px;
     height: 154px;
@@ -86,6 +86,80 @@
   &__submit {
     display: flex;
 
+    input + label::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+
+      width: 16px;
+      height: 16px;
+
+      border: 1px solid #ffffff;
+
+      cursor: pointer;
+
+      @media (max-width: $tablet-width) {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    input + label:hover::before,
+    input:focus + label::before {
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    input:disabled ~ label {
+      opacity: 0.3;
+    }
+
+    input:checked + label::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 14px;
+
+      width: 8px;
+      height: 5px;
+
+      background-image: url("../img/icon-tick.svg");
+      background-repeat: no-repeat;
+
+      cursor: pointer;
+
+
+      @media (max-width: $tablet-width) {
+        left: 5px;
+        top: 6px;
+      }
+    }
+
+    label {
+      position: relative;
+      width: calc(50% - 70px);
+      margin-left: 30px;
+      padding: 10px 0 0 40px;
+
+      font-family: "PT Mono", "Consolas", monospace;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-light;
+      opacity: 0.8;
+      cursor: pointer;
+
+      @media (max-width: $desktop-width) {
+        padding: 8px 0 0 42px;
+      }
+
+      @media (max-width: $tablet-width) {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0 0 34px;
+      }
+    }
+
     @media (max-width: $tablet-width) {
       flex-direction: column;
     }
@@ -109,79 +183,6 @@
     @media (max-width: $tablet-width) {
       width: 100%;
       margin-bottom: 32px;
-    }
-  }
-
-  &__checkbox + label::before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 8px;
-
-    width: 16px;
-    height: 16px;
-
-    border: 1px solid #ffffff;
-
-    cursor: pointer;
-
-    @media (max-width: $tablet-width) {
-      left: 0;
-      top: 0;
-    }
-  }
-
-  &__checkbox + label:hover::before,
-  &__checkbox:focus + label::before {
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-
-  &__checkbox:disabled ~ label {
-    opacity: 0.3;
-  }
-
-  &__checkbox:checked + label::after {
-    content: "";
-    position: absolute;
-    left: 12px;
-    top: 14px;
-
-    width: 8px;
-    height: 5px;
-
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-
-    cursor: pointer;
-
-
-    @media (max-width: $tablet-width) {
-      left: 5px;
-      top: 6px;
-    }
-  }
-
-  &__label {
-    position: relative;
-    width: calc(50% - 70px);
-    margin-left: 30px;
-    padding: 10px 0 0 40px;
-
-    font-family: "PT Mono", "Consolas", monospace;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: $text-light;
-    opacity: 0.8;
-
-    @media (max-width: $desktop-width) {
-      padding: 8px 0 0 42px;
-    }
-
-    @media (max-width: $tablet-width) {
-      width: 100%;
-      margin-left: 0;
-      padding: 0 0 0 34px;
     }
   }
 }

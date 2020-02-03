@@ -21,14 +21,18 @@
     width: 220px;
     height: 317px;
 
-    background: url("../img/about-us-2005.png") no-repeat;
+    background: url("../img/about-us-2005@1x.png") no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/about-us-2005@2x.png");
+    }
 
     @media (max-width: $desktop-width) {
       top: -2px;
       left: -8px;
       width: 251.08px;
       height: 361.79px;
-      background-size: contain;
     }
 
     @media (max-width: $tablet-width) {

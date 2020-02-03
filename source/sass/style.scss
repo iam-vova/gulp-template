@@ -17,9 +17,14 @@
 @import "blocks/footer-top.scss";
 @import "blocks/copyright.scss";
 @import "blocks/social.scss";
+@import "blocks/modal.scss";
+@import "blocks/overlay.scss";
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  height: 100vh;
   margin: 0;
   padding: 0;
 

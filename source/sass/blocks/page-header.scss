@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex: 0 0 auto;
 
-  max-width: 1411px;
+  max-width: 1450px;
+  width: 100%;
   margin: 0 auto;
   padding: 33px 20px;
+  box-sizing: border-box;
 
   @media (max-width: $desktop-width) {
     padding: 19px 25px;
@@ -15,5 +18,3 @@
     padding: 17px;
   }
 }
-
-
