@@ -175,7 +175,7 @@
             <form class="form" method="post">
               <div class="form__wrap">
                 <label class="label-hidden" for="name">Имя</label>
-                <input type="text" id="name" name="name-field" placeholder="Имя" required>
+                <input type="text" id="name" name="name-field" placeholder="Имя" maxlength="20" required>
 
                 <label class="label-hidden" for="tel">Телефон</label>
                 <input type="tel" id="tel" name="tel-field" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
@@ -271,7 +271,7 @@
         <p class="modal-write-us__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal-write-us__form form" method="post">
           <label class="label-hidden" for="name-modal">Имя</label>
-          <input type="text" id="name-modal" name="name-field" placeholder="Имя" required>
+          <input type="text" id="name-modal" name="name-field" placeholder="Имя" maxlength="20" required>
           <label class="label-hidden" for="tel-modal">Телефон</label>
           <input type="tel" id="tel-modal" name="tel-field" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
           <label class="label-hidden" for="question-modal">Ваш вопрос</label>
