@@ -178,7 +178,7 @@
                 <input type="text" id="name" name="name-field" placeholder="Имя" maxlength="20" required>
 
                 <label class="label-hidden" for="tel">Телефон</label>
-                <input type="tel" id="tel" name="tel-field" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+                <input type="tel" id="tel" name="tel-field" placeholder="Телефон" pattern="[\+]7\([0-9]{3}\)[0-9]{7}" minlength="14" maxlength="14" required>
               </div>
 
               <label class="label-hidden" for="question">Ваш вопрос</label>
@@ -232,7 +232,7 @@
         </div>
         <div class="footer-top__column footer-top__column--sections">
           <h3 class="footer-top__section-header">Разделы сайта</h3>
-          <button class="footer-top__btn visually-hidden"></button>
+          <button aria-label="Accardion button" class="footer-top__btn visually-hidden"></button>
           <ul class="footer-top__list">
             <li><a href="#" class="footer-top__text">О компании</a></li>
             <li><a href="#" class="footer-top__text">Продукты</a></li>
@@ -245,7 +245,7 @@
         </div>
         <div class="footer-top__column footer-top__column--contacts">
           <h3 class="footer-top__section-header">Наш офис</h3>
-          <button class="footer-top__btn visually-hidden"></button>
+          <button aria-label="Accardion button" class="footer-top__btn visually-hidden"></button>
           <ul class="footer-top__list">
             <li class="footer-top__text">г. Мытищи, Олимпийский проспект, д.10</li>
             <li><a href="tel:+74955894050" class="footer-top__text">+7 (495) 589-40-50</a></li>
@@ -273,7 +273,7 @@
           <label class="label-hidden" for="name-modal">Имя</label>
           <input type="text" id="name-modal" name="name-field" placeholder="Имя" maxlength="20" required>
           <label class="label-hidden" for="tel-modal">Телефон</label>
-          <input type="tel" id="tel-modal" name="tel-field" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+          <input type="tel" id="tel-modal" name="tel-field" placeholder="Телефон" pattern="[\+]7\([0-9]{3}\)[0-9]{7}" minlength="14" maxlength="14" required>
           <label class="label-hidden" for="question-modal">Ваш вопрос</label>
           <textarea cols="30" rows="10" id="question-modal" name="question-field" placeholder="Ваш вопрос" required></textarea>
           <div class="modal-write-us__submit form__submit">

@@ -5,7 +5,7 @@ var overlay = document.querySelector('.overlay');
 var writeUsModal = overlay.querySelector('.modal-write-us');
 var writeUsForm = writeUsModal.querySelector('.modal-write-us__form');
 var userName = writeUsForm.querySelector('[name=name-field]');
-var tel = writeUsForm.querySelector('[name=tel-fiel]');
+var tel = writeUsForm.querySelector('[name=tel-field]');
 var message = writeUsForm.querySelector('[name=question-field]');
 var modalClose = writeUsModal.querySelector('.modal-write-us__close');
 
@@ -106,3 +106,30 @@ if (accardionBtns) {
     });
   });
 }
+
+if (tel) {
+  tel.addEventListener('focus', function () {
+    if (!tel.value) {
+      tel.value = "+7(";
+    }
+  });
+
+  tel.addEventListener('blur', function () {
+    tel.value === "+7(" ? tel.value = "" : null;
+  });
+
+  var currentValue = tel.value;
+  tel.addEventListener('keyup', function (evt) {
+
+    if ((evt.keyCode < 48 || evt.keyCode > 57) && (evt.keyCode < 96 || evt.keyCode > 105 ) && (evt.keyCode !== 8) && (evt.keyCode !== 46) && (tel.value.length > 14)) {
+      tel.value = currentValue;
+    }
+
+    currentValue = tel.value;
+
+    if ((tel.value.length === 6) && (tel.value.indexOf(')') === -1)) {
+      tel.value += ')';
+    }
+  });
+}
+
