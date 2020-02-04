@@ -9,7 +9,6 @@ var tel = writeUsForm.querySelector('[name=tel-fiel]');
 var message = writeUsForm.querySelector('[name=question-field]');
 var modalClose = writeUsModal.querySelector('.modal-write-us__close');
 
-
 function modalRemove() {
   writeUsModal.classList.remove('modal__show');
   overlay.classList.remove('overlay__show');
