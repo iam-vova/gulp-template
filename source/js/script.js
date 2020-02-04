@@ -6,6 +6,8 @@ var writeUsModal = overlay.querySelector('.modal-write-us');
 var writeUsForm = writeUsModal.querySelector('.modal-write-us__form');
 var userName = writeUsForm.querySelector('[name=name-field]');
 var tel = writeUsForm.querySelector('[name=tel-field]');
+var consultationForm = document.querySelector('.consultation');
+var telFooter = consultationForm.querySelector('[name=tel-field]');
 var message = writeUsForm.querySelector('[name=question-field]');
 var modalClose = writeUsModal.querySelector('.modal-write-us__close');
 
@@ -107,7 +109,7 @@ if (accardionBtns) {
   });
 }
 
-if (tel) {
+function telValidation(tel) {
   tel.addEventListener('focus', function () {
     if (!tel.value) {
       tel.value = "+7(";
@@ -133,3 +135,5 @@ if (tel) {
   });
 }
 
+tel ? telValidation(tel) : null;
+telFooter ? telValidation(telFooter) : null;
