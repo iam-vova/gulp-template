@@ -165,6 +165,22 @@
     @media (max-width: $tablet-width) {
       padding: 0 15px;
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &--passive {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
   }
 
   &__btn {

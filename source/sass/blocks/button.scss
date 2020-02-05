@@ -25,6 +25,10 @@
     background-color: $cyan;
   }
 
+  &:focus {
+    outline: 2px solid darken($cyan, 5%);
+  }
+
   &:active {
     opacity: 0.8;
   }

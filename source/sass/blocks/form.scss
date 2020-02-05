@@ -31,6 +31,12 @@
 
     background-color: #19baff;
     border: none;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      outline: 2px solid darken($cyan, 5%);
+    }
 
     &::placeholder {
       color: $text-light;
@@ -67,6 +73,11 @@
 
     background-color: #19baff;
     border: none;
+
+    &:hover,
+    &:focus {
+      outline: 2px solid darken($cyan, 5%);
+    }
 
     &::placeholder {
       color: $text-light;
@@ -147,6 +158,7 @@
       line-height: 16px;
       color: $text-light;
       opacity: 0.8;
+      box-sizing: border-box;
       cursor: pointer;
 
       @media (max-width: $desktop-width) {

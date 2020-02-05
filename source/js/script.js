@@ -11,14 +11,20 @@ var telFooter = consultationForm.querySelector('[name=tel-field]');
 var message = writeUsForm.querySelector('[name=question-field]');
 var modalClose = writeUsModal.querySelector('.modal-write-us__close');
 
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 function modalRemove() {
   writeUsModal.classList.remove('modal__show');
   overlay.classList.remove('overlay__show');
+  document.body.style.overflow = '';
 }
 
 function modalShow() {
   overlay.classList.add('overlay__show');
   writeUsModal.classList.add('modal__show');
+  document.body.style.overflow = 'hidden';
 }
 
 if (overlay) {
@@ -71,7 +77,7 @@ if (writeUsForm) {
 }
 
 var anchors = document.querySelectorAll('a[href*="#"]');
-anchors.forEach(function(anchor) {
+anchors.forEach(function (anchor) {
   anchor.addEventListener('click', function (evt) {
     evt.preventDefault();
 
@@ -110,20 +116,21 @@ if (accardionBtns) {
 }
 
 function telValidation(tel) {
+  var currentValue = tel.value;
+
   tel.addEventListener('focus', function () {
     if (!tel.value) {
-      tel.value = "+7(";
+      tel.value = '+7(';
+      currentValue = tel.value;
     }
   });
 
   tel.addEventListener('blur', function () {
-    tel.value === "+7(" ? tel.value = "" : null;
+    tel.value === '+7(' ? tel.value = '' : null;
   });
 
-  var currentValue = tel.value;
   tel.addEventListener('keyup', function (evt) {
-
-    if ((evt.keyCode < 48 || evt.keyCode > 57) && (evt.keyCode < 96 || evt.keyCode > 105 ) && (evt.keyCode !== 8) && (evt.keyCode !== 46) && (tel.value.length > 14)) {
+    if ((evt.keyCode < 48 || evt.keyCode > 57) && (evt.keyCode < 96 || evt.keyCode > 105) && (evt.keyCode !== 8) && (evt.keyCode !== 46)) {
       tel.value = currentValue;
     }
 
@@ -131,6 +138,11 @@ function telValidation(tel) {
 
     if ((tel.value.length === 6) && (tel.value.indexOf(')') === -1)) {
       tel.value += ')';
+    }
+
+    if ((tel.value.length === 7) && (evt.keyCode === 8)) {
+      tel.value = tel.value.substr(0, 5);
+      currentValue = tel.value;
     }
   });
 }
