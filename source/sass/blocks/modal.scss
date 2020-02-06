@@ -109,6 +109,11 @@
     display: flex;
     flex-direction: column;
 
+    input {
+      left: 10px;
+      top: 90px;
+    }
+
     label {
       width: auto;
       margin-left: 0;

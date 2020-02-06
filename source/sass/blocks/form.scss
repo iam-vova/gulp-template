@@ -95,12 +95,13 @@
   }
 
   &__submit {
+    position: relative;
     display: flex;
 
     input + label::before {
       content: "";
       position: absolute;
-      left: 7px;
+      left: 17px;
       top: 8px;
 
       width: 16px;
@@ -128,7 +129,7 @@
     input:checked + label::after {
       content: "";
       position: absolute;
-      left: 12px;
+      left: 22px;
       top: 14px;
 
       width: 8px;
@@ -146,11 +147,25 @@
       }
     }
 
+    input {
+      left: 315px;
+      top: 15px;
+
+      @media (max-width: $desktop-width) {
+        left: 325px;
+      }
+
+      @media (max-width: $tablet-width) {
+        left: 10px;
+        top: 85px;
+      }
+    }
+
     label {
       position: relative;
-      width: calc(50% - 70px);
-      margin-left: 30px;
-      padding: 10px 0 0 40px;
+      width: 50%;
+      margin-left: 20px;
+      padding: 10px 0 0 50px;
 
       font-family: "PT Mono", "Consolas", monospace;
       font-weight: 400;
@@ -162,7 +177,7 @@
       cursor: pointer;
 
       @media (max-width: $desktop-width) {
-        padding: 8px 0 0 42px;
+        padding: 8px 0 0 55px;
       }
 
       @media (max-width: $tablet-width) {
