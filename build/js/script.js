@@ -134,15 +134,16 @@ function telValidation(tel) {
       tel.value = currentValue;
     }
 
-    currentValue = tel.value;
-
     if ((tel.value.length === 6) && (tel.value.indexOf(')') === -1)) {
       tel.value += ')';
     }
-
+    
+    currentValue = tel.value;
+  });
+  
+  tel.addEventListener('keydown', function (evt) {
     if ((tel.value.length === 7) && (evt.keyCode === 8)) {
-      tel.value = tel.value.substr(0, 5);
-      currentValue = tel.value;
+      tel.value = tel.value.substr(0, 6);
     }
   });
 }
